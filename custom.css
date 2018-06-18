@@ -1,0 +1,23 @@
+﻿html {
+  font-size:0.9em;
+}
+
+.gmap{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  padding: 0 0 56% 0;
+  position: relative;
+  overflow: hidden;
+  float: right;
+}
+
+.gmap iframe,
+.gmap object,
+.gmap embed{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+

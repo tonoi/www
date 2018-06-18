@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log on tonoi株式会社</title>
+    <link>https://tonoi.co.jp/categories/log/</link>
+    <description>Recent content in Log on tonoi株式会社</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Thu, 22 Mar 2018 17:19:44 +0900</lastBuildDate>
+    
+	<atom:link href="https://tonoi.co.jp/categories/log/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018/03</title>
+      <link>https://tonoi.co.jp/about/201803/</link>
+      <pubDate>Thu, 22 Mar 2018 17:19:44 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201803/</guid>
+      <description>2018/3/22 に アドバンストシステムズ株式会社 様と共同開発のための NDA 締結。</description>
+    </item>
+    
+    <item>
+      <title>2018/02</title>
+      <link>https://tonoi.co.jp/about/201802/</link>
+      <pubDate>Fri, 09 Feb 2018 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201802/</guid>
+      <description>新体制とし、Hybrid Computing による画像解析の研究開発に着手。</description>
+    </item>
+    
+    <item>
+      <title>2017/09</title>
+      <link>https://tonoi.co.jp/about/201709/</link>
+      <pubDate>Fri, 15 Sep 2017 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201709/</guid>
+      <description>S3Cubed 様の依頼により高機能ストレージのソフトウェア企画・設計を行う。</description>
+    </item>
+    
+    <item>
+      <title>2016/06</title>
+      <link>https://tonoi.co.jp/about/201606/</link>
+      <pubDate>Tue, 21 Jun 2016 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201606/</guid>
+      <description>サムライインキュベートで固定電話につながるドアホンをデモ。</description>
+    </item>
+    
+    <item>
+      <title>2016/01</title>
+      <link>https://tonoi.co.jp/about/201601/</link>
+      <pubDate>Wed, 20 Jan 2016 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201601/</guid>
+      <description>経産省 IoT ラボに参画 試作中の不在時の宅配便受け取りロボ を IoT ラボ セレクションとして応募。以後、定期的に IoT ラボの会合に顔を出す。</description>
+    </item>
+    
+    <item>
+      <title>2015/03</title>
+      <link>https://tonoi.co.jp/about/201503/</link>
+      <pubDate>Fri, 20 Mar 2015 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/about/201503/</guid>
+      <description>大手キャリアに SNS認証を使ったWi-Fi接続 に関して相談。特許取得を前提に feedback などをいただく。</description>
+    </item>
+    
+  </channel>
+</rss>

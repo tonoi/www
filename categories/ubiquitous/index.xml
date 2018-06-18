@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubiquitous on tonoi株式会社</title>
+    <link>https://tonoi.co.jp/categories/ubiquitous/</link>
+    <description>Recent content in Ubiquitous on tonoi株式会社</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 23 Nov 2015 11:30:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://tonoi.co.jp/categories/ubiquitous/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5G対応IoT機器の自動設定</title>
+      <link>https://tonoi.co.jp/products/5g_hackson/</link>
+      <pubDate>Mon, 23 Nov 2015 11:30:56 +0900</pubDate>
+      
+      <guid>https://tonoi.co.jp/products/5g_hackson/</guid>
+      <description>普及が見込まれるIoT機器は、製品ごとに初期設定方法が異なり利用者の負担となっている。機器の販売時に店舗のレジスターでユーザー登録と初期設定</description>
+    </item>
+    
+  </channel>
+</rss>
