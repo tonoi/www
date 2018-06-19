@@ -1,5 +1,10 @@
 ﻿var data = [
 {
+url: "https://tonoi.co.jp/about/201805/",
+title: "201805",
+content: "[Hybrid Computing の基盤技術となるパテントを出願: 特願 2018-089022]"
+},
+{
 url: "https://tonoi.co.jp/about/201803/",
 title: "2018/03",
 content: "[2018/3/22 に アドバンストシステムズ株式会社 様と共同開発のための NDA 締結。]"
@@ -155,12 +160,12 @@ title: "Hybrid Computing",
 content: "[]"
 },
 {
-url: "https://tonoi.co.jp/tags/iot/",
+url: "https://tonoi.co.jp/categories/iot/",
 title: "Iot",
 content: "[]"
 },
 {
-url: "https://tonoi.co.jp/categories/iot/",
+url: "https://tonoi.co.jp/tags/iot/",
 title: "Iot",
 content: "[]"
 },
@@ -182,6 +187,11 @@ content: "[]"
 {
 url: "https://tonoi.co.jp/tags/opencl/",
 title: "Opencl",
+content: "[]"
+},
+{
+url: "https://tonoi.co.jp/tags/patent/",
+title: "Patent",
 content: "[]"
 },
 {
