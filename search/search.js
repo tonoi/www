@@ -160,12 +160,12 @@ title: "Hybrid Computing",
 content: "[]"
 },
 {
-url: "https://tonoi.co.jp/categories/iot/",
+url: "https://tonoi.co.jp/tags/iot/",
 title: "Iot",
 content: "[]"
 },
 {
-url: "https://tonoi.co.jp/tags/iot/",
+url: "https://tonoi.co.jp/categories/iot/",
 title: "Iot",
 content: "[]"
 },
