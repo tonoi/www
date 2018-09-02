@@ -1,5 +1,10 @@
 ﻿var data = [
 {
+url: "https://tonoi.co.jp/about/201808/",
+title: "201808",
+content: "[Hybrid Computing の実装に関わるパテントを出願: 特願 2018-159325]"
+},
+{
 url: "https://tonoi.co.jp/about/201805/",
 title: "201805",
 content: "[Hybrid Computing の基盤技術となるパテントを出願: 特願 2018-089022]"
