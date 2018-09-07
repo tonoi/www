@@ -140,15 +140,26 @@
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
       
 
-<p><img src="https://tonoi.co.jp/images/3fields.jpg" title="3 fields" style="float: right; width: 18%; margin-left: 0.5em; margin-bottom: 0.5em;" /></p>
+<h2 id="hybrid-computing-とは">Hybrid Computing とは</h2>
 
-<p>　長年の認証技術における開発経験を活かした Ubiquitous/IoT/NFV を弊社の業務領域とします。現在は、それら複数の領域にまたがる HC (Hybrid Computing) を推進しております。</p>
+<p>　弊社の推進する Hybrid Computing (HC) は、データ位置を表すポインターに特別な処理を施し、ストレージ機器や別プロセッサーなどに分散演算を行います。<br />
+　ストレージ機器に分散演算する事で、大容量データの転送を削減でき <strong>ネットワーク帯域不足</strong> を解消します。ポインターを操作する事で、分散演算されるデータが一つの空間で表現され、従来のコンテナ技術などでの分散演算よりも開発者の負担が軽減され <strong>DevOps</strong> が可能となります。</p>
+
+<p><details><summary>技術詳細</summary>
+<img src="https://tonoi.co.jp/images/HC_diagram.png" title="HC diagram" style="float: center; width: 100%;" /></p>
+
+<p>　上図は高解像度 (Hi-Def) の AI 画像認識における通常処理と HC 処理の比較です。左の n_tier が通常処理で、Processor が Storage から Hi-Def Image を読み取り、Processor 上の AI Logic で Image Analysis (画像認識) を行います。右の HC では画像認識を行う AI Logic を Storage 上で実行できる形式に Translate (変換) します。変換結果は Agent となり、Storage 上で直接 Hi-Def Image を読み取り Image Analysis を行います。<br />
+　読み込む画像が小さい場合は、AI Logic の転送が不要な分だけ n_tier が高速・高効率に動作します。画像が十分に大きい場合は AI Logic を Translate した Agent を転送する方が容易であるため、HC が優位となります。HC ではポインターに特別な処理を施すことで、データサイズに応じて左右どちらの処理方法も同じコードのまま動作する Hybrid な実装となっております。</p>
+
+<p>特願 2018-089022: HC基盤技術となるデータアクセスポインター処理の変更<br />
+特願 2018-159325: HC実装技術となる分散演算方式
+</details></p>
 
 <p><details><summary>背景情報</summary></p>
 
-<h2 id="hybrid-computing">Hybrid Computing</h2>
+<h2 id="一般的な-hybrid-computing">一般的な Hybrid Computing</h2>
 
-<p>　Wikipediaでは、デジタルと電子式アナログを組み合わせた方式を Hybrid Computing としています。弊社ではより広くとらえ、CloudとEdge、Heterogeneous など複数の方式を組み合わせ様々な事業領域に適合するサービスを提案しております。</p>
+<p>　Wikipedia では、デジタルと電子式アナログを組み合わせた方式を Hybrid Computing としています。弊社ではより広くとらえ、Cloud と Edge、Heterogeneous など複数の方式を組み合わせた点を Hybrid としております。</p>
 
 <h3 id="memory-hierarchy">Memory Hierarchy</h3>
 
@@ -174,13 +185,11 @@
 
 <p>　HPC (High Performance Computing) の世界では、データ転送させずにメモリ・ストレージ上で直接処理させる方法が開発されています。ただし、メモリもプロセッサも変化が激しい世界ですので、双方を同じの基盤にまとめる事は、大規模プロジェクトではリスクが大きく実現されておりません。</p>
 
-<p>　弊社では、上記の考え方を推し進めた Hybrid Computing を研究開発し、Edge Computing の推進と DevOps の改善を目指しております。</p>
+<p>　弊社では、上記の考え方を推し進めた Hybrid Computing を研究開発し、Edge Computing の推進と DevOps の改善を目指しております。
+</details></p>
 
-<hr />
-
-<div style="text-align: right;">
-M.Koi.
-</div>
+<p><details><summary>対象市場</summary>
+<img src="https://tonoi.co.jp/images/markets.png" title="対象市場" style="float: center; width: 100%;" /></p>
 
 <p></details></p>
 
@@ -196,11 +205,11 @@ M.Koi.
     <span class="f6 db">Products</span>
     <h1 class="f3 near-black">
       <a href="https://tonoi.co.jp/products/hc_analysis/" class="link black dim">
-        HC による画像解析 (企画・開発中)
+        HC によるAI分散処理ミドルウェア (開発中)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      画像解析はクラウド上で行う手法が広まっていますが、以下の理由からエッジ上で処理するケースがあります。 プライバシー・法規制 ネットワーク接続性 レ
+      
     </div>
   </div>
 </div>
