@@ -636,6 +636,8 @@ p {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  display: block;
+  text-decoration: none;
 }
 #fh5co-services .service:hover{
   cursor: pointer;
@@ -664,28 +666,6 @@ p {
   -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
   -ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
-}
-
-#fh5co-services .service-modal .modal-dialog{
-  top: 10rem;
-}
-
-#fh5co-services .service-modal .modal-dialog b{
-  font-size: 25px;
-  display: block;
-  color: #444;
-}
-#fh5co-services .service-modal .modal-dialog b:after{
-  content: '';
-  display: block;
-  width: 32rem;
-  height: 0.5rem;
-  background-color: #745399;
-  border-radius: 2px;
-}
-
-#fh5co-services .service-modal .modal-body{
-  padding: 40px;
 }
 
 .checked {
@@ -1238,3 +1218,31 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+body#service .serviceheader{
+  position: fixed;
+}
+
+body#service .contents{
+  padding: 40px;
+}
+body#service p {
+  text-align: left;
+}
+
+body#service p b{
+  font-size: 25px;
+  display: block;
+  color: #444;
+}
+body#service p b:after{
+  content: '';
+  display: block;
+  width: 32rem;
+  height: 0.5rem;
+  background-color: #745399;
+  border-radius: 2px;
+}
+
+body#service img{
+  max-width: 100%;
+}

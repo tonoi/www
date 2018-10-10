@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tonoi株式会社</title>
-    <link>/</link>
-    <description>Recent content on tonoi株式会社</description>
+    <title>Services on tonoi株式会社</title>
+    <link>/services/</link>
+    <description>Recent content in Services on tonoi株式会社</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>Fri, 05 Oct 2018 14:40:14 +0900</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
