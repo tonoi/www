@@ -40,6 +40,9 @@
 				$this.closest('li').addClass('active');
 				$this.closest('.fh5co-tabs-container').find('.fh5co-tab-content').removeClass('active');
 				$this.closest('.fh5co-tabs-container').find('.fh5co-tab-content[data-tab-content="'+tab+'"]').addClass('active');
+				console.log($('.fh5co-grid-item[data-tab-content-image="'+tab+'"]'))
+				$('.fh5co-grid-item.toggle-image').removeClass('active');
+				$('.fh5co-grid-item.toggle-image[data-tab-content-image="'+tab+'"]').addClass('active');
 		});
 	}
 

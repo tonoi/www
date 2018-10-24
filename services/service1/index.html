@@ -57,53 +57,44 @@
     <div class="fh5co-page">
       <div id="fh5co-container">
         <div class="js-sticky">
-  <div class="fh5co-main-nav">
+  <div class="fh5co-sub-nav">
     <div class="container">
       <div class="fh5co-menu-1">
       	<a href="../../index.html" class='external'>Home</a>
       	
-      	  <a href="/services/service1" class="external active">HCとは</a>
+      	  <a href="/services/service1" class="external active">HCミドルウェア</a>
       	
 
       	
-      	  <a href="/services/service2" class="external">HCミドルウェア</a>
+      	  <a href="/services/service2" class="external">高性能ストレージ</a>
       	
 
       	
-      	  <a href="/services/service3" class="external">高性能ストレージ</a>
+      	  <a href="/services/service3" class="external">ドアホン</a>
       	
 
-      	
-      	  <a href="/services/service4" class="external">ドアホン</a>
-      	
-
-        
-          <a href="/services/service5" class="external">5G対応IoT</a>
-      	
-        
-      	  <a href="/services/service6" class="external">Wi-Fi接続</a>
-      	
       </div>
     </div>
   </div>
 </div>
 
         <div class="contents">
-        <p>弊社の推進する Hybrid Computing (HC) は、データ位置を表すポインターに特別な処理を施し、ストレージ機器や別プロセッサーなどに分散演算を行います。<br />
-ストレージ機器に分散演算する事で、大容量データの転送を削減でき <strong>ネットワーク帯域不足</strong> を解消します。ポインターを操作する事で、分散演算されるデータが一つの空間で表現され、従来のコンテナ技術などでの分散演算よりも開発者の負担が軽減され <strong>DevOps</strong> が可能となります。</p>
+          <div class="inner">
+            <p><b>Deep Learning の勘所</b><br/>現代の AI の代表格である Deep Learning は従来手法ではプログラミングしづらかった案件を Neural Network を利用して自動化します。案件に合わせて Neural Network を学習させ推論可能な AI ロジックを生成するためには膨大な元データが必要となります。<br/><strong>元データ</strong><br/><img src="/images/RAW_Data.png" alt="元データ" /><br/>ギガ級のファイルを多数集めたテラ ~ ペタ級の容量。対象空間の前後情報である時間軸を含む四次元<br/><br/><strong>強化学習</strong><br/><img src="/images/GPGPU.png" alt="GPGPU" /><br/>GPUが持つ  16 ~ 32ギガのメモリ上に Neural Network を構築し元データをストリームプロセッシングして学習。空間を再現する三次元<br/><br/><strong>推論エンジン</strong><br/><img src="/images/Arduino.png" alt="Arduino" /><br/>USB メモリに入る程度のキロ ~ メガ級の AI ロジック を用いてビデオ動画などを処理。イメージセンサーの二次元<br/><br/>元データはテラ ~ ペタ級と非常に大容量であるため、強化学習用の GPU サーバーを設置したクラウドにネットワークで転送することが出来ず、Amazon Snowball のようなストレージ機器にデータを保存し宅配便でクラウドに輸送しています。<br />
+<img src="/images/AWS_Snowball.png" alt="AWS snowball" /><br/>強化学習に対して推論エンジンは軽い処理です。学習済みの AI ロジックは数キロ程度の大きさであり、組み込みプロセッサーに AI ロジックをすべて読み込んだ状態で自動運転などの AI 処理が可能です。ただしレスポンスが必要とされるため、軽量ながら並列性の高い専用のチップや FPGA などが利用されます。<br/>強化学習と推論エンジンの負荷の違いを <strong>Deep Learing の非対称性</strong>と呼びます。<br/>組み込みにおける AI の高速化技術が各社より発表されておりますが、推論エンジン側であるため元々高速化しやすい特性があります。一方、強化学習は推論に比べ高次元の処理 (Hi-Dimenstion Compute) であり高速化はハードウェアの強化に頼っている事が現状です。<br />高次元処理である強化学習を高速化するため、Hybrid Computingを利用して分散処理をさせるミドルウェアを弊社にて開発中です。<br/><br/></p>
 
-<p><br/><br/><b>技術詳細</b>
-<img src="/images/HC_diagram.png" alt="HC_diagram" /><br/>
-上図は高解像度 (Hi-Def) の AI 画像認識における通常処理と HC 処理の比較です。左の n_tier が通常処理で、Processor が Storage から Hi-Def Image を読み取り、Processor 上の AI Logic で Image Analysis (画像認識) を行います。右の HC では画像認識を行う AI Logic を Storage 上で実行できる形式に Translate (変換) します。変換結果は Agent となり、Storage 上で直接 Hi-Def Image を読み取り Image Analysis を行います。
-<br />読み込む画像が小さい場合は、AI Logic の転送が不要な分だけ n_tier が高速・高効率に動作します。画像が十分に大きい場合は AI Logic を Translate した Agent を転送する方が容易であるため、HC が優位となります。HC ではポインターに特別な処理を施すことで、データサイズに応じて左右どちらの処理方法も同じコードのまま動作する Hybrid な実装となっております。
-<br/>特願 2018-089022: HC基盤技術となるデータアクセスポインター処理の変更<br />特願 2018-159325: HC実装技術となる分散演算方式</p>
+<p><b>動作イメージ</b><br/>
 
-<p><br/><br/><b>背景情報</b>
-<br/><strong style='font-size: 19px;'>一般的な Hybrid Computing</strong>
-<br/>Wikipedia では、デジタルと電子式アナログを組み合わせた方式を Hybrid Computing としています。弊社ではより広くとらえ、Cloud と Edge、Heterogeneous など複数の方式を組み合わせた点を Hybrid としております。<strong>Memory Hierarchy</strong><br/>コンピューターの処理速度を制限する大きな要因の一つがメモリの速度です。すべてを SRAM で構成できれば最速のコンピューターになりますが、コスト高です。そこで、速度とコストを両立させるために多種類のメモリ・ストレージを組み合わせて現代のコンピューターは作られています。この組み合わせを下左図のMemoryHierarchy と呼びます。
-<br/><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/ComputerMemoryHierarchy.svg" alt="Wikipedia: Memory Hierarchy" /><br/> <img src="/images/memory_bottleneck.jpg" alt="bottleneck" /><br/>メモリ速度の改善よりも半導体の集積度向上が早いため、Memory Hierarchy はピラミッド型から上右図のような中央がへこんだ鼓型に変化しつつあります。Memory Hierarchy の歪みが処理速度の制限要因となっています。 <br/><strong>分散処理</strong><br/>Memory Hierarchy のピラミッドを歪ませない方法のひとつが、ピラミッドを小さく分けることです。Hadoop や Apatch Spark はビッグデータを細かく分けて分散処理をしています。非常に効果的な手法なのですが、さらなる高速化を求めると小分けにした処理ごとのデータ転送が制限要素になってきます。<br/><strong>In-Storage Processing</strong><br/>HPC (High Performance Computing) の世界では、データ転送させずにメモリ・ストレージ上で直接処理させる方法が開発されています。ただし、メモリもプロセッサも変化が激しい世界ですので、双方を同じの基盤にまとめる事は、大規模プロジェクトではリスクが大きく実現されておりません。弊社では、上記の考え方を推し進めた Hybrid Computing を研究開発し、Edge Computing の推進と DevOps の改善を目指しております。</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/2ABg7qGMB8Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
 
-      </div>
+<p><b>動作環境</b><br/><ul><li>Mirantis Cloud Platform (MCP)</li><li>Intel Xeon processor または nVidia GPU</li></ul><br/><br/><b>構成要素</b></br><ul><li>OpenCL AI ロジックを HC で分散処理するための Python インターフェース</li><li>Ceph ストレージ上で分散処理を実現する MCP 拡張キット</li></ul><br/><br/><b>優位点</b><br/><ol><li>開発の容易性: Dockerによるマイクロサービスの分散化と異なり、一つのアプリケーションの中でAI処理を記述できるため、分散処理のための余分な開発が不要となる。</li><li> 高効率処理: 実行コードをデータ場所に転送して実行するため、データ通信が削減され消費電力が下がり、処理速度が向上する。</li><li> 多種環境対応: OpenCLで記述するためGPUやIntel CPUなど複数環境で動作</li><li> 超高速処理: AI処理がOSを介さずに直接ストレージにアクセス
+する特別な高速化を実装</li><br/><br/><b>提供時期 (見込み)</b><br/><sup>2018</sup>&frasl;<sub>11</sub> 弊社サーバー上における動作デモ<br /><sup>2019</sup>&frasl;<sub>3</sub>  パートナー企業における実運用<br /><sup>2019</sup>&frasl;<sub>11</sub> 一般公開</p>
+
+          </div>
+        </div>
         
         <div id="fh5co-footer">
   <div class="container">
