@@ -494,9 +494,12 @@ p {
   }
 }
 #fh5co-about .position img{
-  width: 85%;
-  padding-bottom: 30px;
-  padding-left: 13%;
+  width: 72%;
+  border: solid 2px #745399;
+  border-radius: 10px 10px 10px 10px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .fh5co-grid {
