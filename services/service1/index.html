@@ -80,18 +80,50 @@
 
         <div class="contents">
           <div class="inner">
-            <p><b>Deep Learning の勘所</b><br/>現代の AI の代表格である Deep Learning は従来手法ではプログラミングしづらかった案件を Neural Network を利用して自動化します。案件に合わせて Neural Network を学習させ推論可能な AI ロジックを生成するためには膨大な元データが必要となります。<br/><strong>元データ</strong><br/><img src="/images/RAW_Data.png" alt="元データ" /><br/>ギガ級のファイルを多数集めたテラ ~ ペタ級の容量。対象空間の前後情報である時間軸を含む四次元<br/><br/><strong>強化学習</strong><br/><img src="/images/GPGPU.png" alt="GPGPU" /><br/>GPUが持つ  16 ~ 32ギガのメモリ上に Neural Network を構築し元データをストリームプロセッシングして学習。空間を再現する三次元<br/><br/><strong>推論エンジン</strong><br/><img src="/images/Arduino.png" alt="Arduino" /><br/>USB メモリに入る程度のキロ ~ メガ級の AI ロジック を用いてビデオ動画などを処理。イメージセンサーの二次元<br/><br/>元データはテラ ~ ペタ級と非常に大容量であるため、強化学習用の GPU サーバーを設置したクラウドにネットワークで転送することが出来ず、Amazon Snowball のようなストレージ機器にデータを保存し宅配便でクラウドに輸送しています。<br />
-<img src="/images/AWS_Snowball.png" alt="AWS snowball" /><br/>強化学習に対して推論エンジンは軽い処理です。学習済みの AI ロジックは数キロ程度の大きさであり、組み込みプロセッサーに AI ロジックをすべて読み込んだ状態で自動運転などの AI 処理が可能です。ただしレスポンスが必要とされるため、軽量ながら並列性の高い専用のチップや FPGA などが利用されます。<br/>強化学習と推論エンジンの負荷の違いを <strong>Deep Learing の非対称性</strong>と呼びます。<br/>組み込みにおける AI の高速化技術が各社より発表されておりますが、推論エンジン側であるため元々高速化しやすい特性があります。一方、強化学習は推論に比べ高次元の処理 (Hi-Dimenstion Compute) であり高速化はハードウェアの強化に頼っている事が現状です。<br />高次元処理である強化学習を高速化するため、Hybrid Computingを利用して分散処理をさせるミドルウェアを弊社にて開発中です。<br/><br/></p>
+            <p><b>Deep Learning の勘所</b>
+現代 AI の代表格である Deep Learning (DL) は従来手法ではプログラミングしづらかった案件を Neural Network (NN) を利用して自動化します。案件に合わせて NN を学習 (強化学習) させ推論可能な AI ロジックを生成するため膨大な元データが必要となります。<br/><br/><strong>DL 学習用の元データ</strong><br/><img src="/images/RAW_Data.png" alt="元データ" /><br/>半導体工場における表面検査は画像解析に一晩かかっています。4Kを使ったVRデータは数十分でテラ級の容量となります。GoogleMapの元データも大容量です。病理解析やMRIのDICONファイルもテラ級であり、ファイルが集まるとペタ級の容量になります。三次元情報に時間情報などが加わり四次元以上のデータともいわれます。
+<br/><br/>
+<strong>強化学習</strong><br/><img src="/images/GPGPU.png" alt="GPGPU" /><br/>GPUが持つ 16 ~ 32 ギガのメモリ上に NN を構築し元データをストリームプロセッシングし学習させます。特定空間を再現するため三次元データと見なすこともできます。
+<br/><br/>
+<strong>推論エンジン</strong><br/><img src="/images/Arduino.png" alt="Arduino" /><br/>USB メモリに入る程度のキロ ~ メガ級の AI ロジック を用いてビデオ動画などを処理します。撮像素子からの画像処理を行う場合は二次元データとなります。
+<br/><br/>
+元データはテラ ~ ペタ級と非常に大容量であるため、強化学習用の GPU サーバーを設置したクラウドにネットワークで転送することが出来ません。Amazon Snowball のようなストレージ機器にデータを保存し宅配便でクラウドに輸送しています。<br />
+<img src="/images/AWS_Snowball.png" alt="AWS snowball" />
+<br/><br/>
+強化学習に対して推論エンジンはとても軽い処理です。学習済みの AI ロジックデータはキロ級の大きさであり、組み込みプロセッサーに AI ロジックをすべて読み込んだ状態で自動運転などの AI 処理が可能です。レスポンスが必要とされるため、軽量ながら並列性の高い専用チップや FPGA などが利用されます。<br/>強化学習と推論エンジンの負荷の違いを <strong>Deep Learing の非対称性</strong>と呼びます。<br/>組み込みにおける AI の高速化技術が各社より発表されておりますが、推論エンジン側であるため元々高速化しやすい特性があります。一方、強化学習は推論に比べ高次元の処理 (Hi-Dimenstion Compute) であり高速化はハードウェアの強化に頼っている現状です。<br />高次元処理である強化学習を高速化するため、<strong>Hybrid Computing (HC)</strong> を利用し分散処理させるミドルウェアを弊社にて開発中です。</p>
 
-<p><b>動作イメージ</b><br/>
+<p><br/><br/>
+<b>対象市場</b>
+HC はノイズの多い大容量の元データに対して効果的です。<br/><br/>
+<strong>知能化工場</strong><br/>
+鳴り物入りで AI を使った画像処理による検査装置を入れても、メンテ費用や新技術の台頭で数年で使われなくなる話を聞きます。一方、昔ながらの専用機器は数十年以上使い続けて交換部品がなくなり修理もままならないそうです。HC によって廉価な汎用部品を組み合わせながら、クラウドから常に最新の技術を導入し改善し続けられる知能化工場を実現します。
+<br/><br/>
+<strong>スマートストア</strong><br/>
+Amazon Go のような店舗は規模が拡大すると対応するデータセンターに大きな負荷がかかります。HC によってデータセンターの負荷を削減しつつ、店舗ごとの違いを吸収しリモートメンテを可能とします。
+<br/><br/>
+<strong>次世代ライブ中継</strong><br/>
+ネットが発達しライブ中継の価値が上昇し、ドローンや VR、 4K/8K など新技術が生まれています。どれもデータサイズが大きく、通信回線の確保が急務となっております。HC によって低速な回線ながらあたかもクラウドの中ですべてが処理されているかのように動かし、新技術を気軽に試せる運用をもたらします。</p>
+
+<p><br/><br/>
+<b>動作イメージ</b>
+手書き画像のハッシュ値を作成し、それと同じハッシュ値を持つフォントのグリフ (フォントの画像データ) を探す処理を、従来型の n層アーキテクチャと HC で比較しています。HC ではフォントのグリフがあるストレージ機器の内部でハッシュ計算を行うためデータ転送が削減され高速化されています。<br/>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="//www.youtube.com/embed/2ABg7qGMB8Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-</p>
 
-<p><b>動作環境</b><br/><ul><li>Mirantis Cloud Platform (MCP)</li><li>Intel Xeon processor または nVidia GPU</li></ul><br/><br/><b>構成要素</b></br><ul><li>OpenCL AI ロジックを HC で分散処理するための Python インターフェース</li><li>Ceph ストレージ上で分散処理を実現する MCP 拡張キット</li></ul><br/><br/><b>優位点</b><br/><ol><li>開発の容易性: Dockerによるマイクロサービスの分散化と異なり、一つのアプリケーションの中でAI処理を記述できるため、分散処理のための余分な開発が不要となる。</li><li> 高効率処理: 実行コードをデータ場所に転送して実行するため、データ通信が削減され消費電力が下がり、処理速度が向上する。</li><li> 多種環境対応: OpenCLで記述するためGPUやIntel CPUなど複数環境で動作</li><li> 超高速処理: AI処理がOSを介さずに直接ストレージにアクセス
-する特別な高速化を実装</li><br/><br/><b>提供時期 (見込み)</b><br/><sup>2018</sup>&frasl;<sub>11</sub> 弊社サーバー上における動作デモ<br /><sup>2019</sup>&frasl;<sub>3</sub>  パートナー企業における実運用<br /><sup>2019</sup>&frasl;<sub>11</sub> 一般公開</p>
+<br/>
+<b>動作環境</b><br/>
+<ul><li>Mirantis Cloud Platform (MCP)</li><li>Intel Xeon processor または nVidia GPU</li></ul>
+<br/><br/>
+<b>構成要素</b><br/>
+<ul><li>OpenCL AI ロジックを HC で分散処理するための Python インターフェース</li><li>Ceph ストレージ上で分散処理を実現する MCP 拡張キット</li></ul>
+<br/><b>優位点</b><br/>
+<ol><li>開発の容易性: Dockerによるマイクロサービスの分散化と異なり、一つのアプリケーションの中でAI処理を記述できるため、分散処理のための余分な開発が不要となる。</li><li> 高効率処理: 実行コードをデータ場所に転送して実行するため、データ通信が削減され消費電力が下がり、処理速度が向上する。</li><li> 多種環境対応: OpenCLで記述するためGPUやIntel CPUなど複数環境で動作</li><li> 超高速処理: AI処理がOSを介さずに直接ストレージにアクセスする特別な高速化を実装</li></ol>
+<br/><b>提供時期 (見込み)</b><br/><sup>2018</sup>&frasl;<sub>11</sub> 弊社サーバー上における動作デモ<br /><sup>2019</sup>&frasl;<sub>3</sub>  パートナー企業における実運用<br /><sup>2019</sup>&frasl;<sub>11</sub> 一般公開
+<br/><br/>
+<b>Special Thanks</b><br/>
+東京理科大学 理窓ビジネス同友会 白鳥 考生様</p>
 
           </div>
         </div>
@@ -117,6 +149,15 @@
     </div>
   </div>
 </div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125423302-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125423302-1');
+</script>
 
         
       </div>
