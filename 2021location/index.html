@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>電波を使わない位置情報</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script language="JavaScript">
+$(function() {
+const video  = document.querySelector("#camera");
+
+// Device識別
+    var getDevice = (function(){
+        var ua = navigator.userAgent;
+        if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+            return 'sp';
+        }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+            return 'tab';
+        }else{
+            return 'other';
+        }
+    })();
+
+    // カメラ設定 
+    var constraints_w = {
+        audio: false,
+        video: {
+            width: { ideal: 1024 },
+            height: { ideal: 1024 },
+            facingMode: { exact: "environment" }   // スマホフロントカメラを利用する
+        }
+    };
+    if( getDevice == 'other' ){
+        console.log("PC mode");
+        constraints_w.video.facingMode = "user";  // PCカメラを利用する
+    } else {
+        console.log("SP mode");
+    }
+    const constraints = constraints_w;
+
+    // カメラを<video>と同期
+    if( !(typeof navigator.mediaDevices === "undefined")) {
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then( (stream) => {
+            video.srcObject = stream;
+            video.onloadedmetadata = (e) => {
+                video.play();
+            };
+        })
+        .catch( (err) => {
+            console.log(err.name + ": " + err.message);
+        });
+    }
+
+    $('#btn1').click(async function() {
+        img = document.getElementById('map');
+        if (img.src.lastIndexOf('org') > 0 ) {
+            for(i=0; i<18; i++) {
+                $('#loader').append('.');
+                await sleep(100);
+            }
+            img.src = "after.png";
+        } else {
+            $('#loader').text('');
+            img.src = "org.png";
+        }
+    });
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+});
+</script>
+</head>
+<body>
+<div style="height:130px">
+<div id="input_area" style="width:120px;height:120px;float:left;top:0px;left:0px;">
+    <video id="camera" style="width:120px;height:120px;top:0px;left:0px;object-fit:cover;"></video>
+</div>
+<div>電波を使わない位置情報サービス<br />
+<input type="button" id="btn1" value="現在位置" />
+<br />
+<span id="loader"></span>
+</div>
+</div>
+
+<div style="max-height:60vw; max-width:100vw; overflow:scroll">
+<img src="org.png" id="map" />
+</div>
+</body>
+</html>
