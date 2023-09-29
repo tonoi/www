@@ -14,8 +14,18 @@ export type MBPageProps = {
 
 const Page: React.FC<React.PropsWithChildren<PageProps<MBPageProps>>> = ({ data: { page }, children }) => (
   <Layout>
-    <Heading as="h1" variant="styles.h1">
-      {page.title}
+    <Heading>
+      <span sx={{ 
+            display: 'inline',
+            position: 'absolute',
+            left: 20,
+            top: 0,
+            marginRight: 'auto',
+            my: 3
+      }}
+      >
+        {page.title}
+      </span>
     </Heading>
     <section sx={{ my: 5, variant: `layout.content` }}>{children}</section>
   </Layout>

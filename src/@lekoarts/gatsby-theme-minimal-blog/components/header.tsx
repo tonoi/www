@@ -1,38 +1,43 @@
 /** @jsx jsx */
 import { jsx, Flex } from "theme-ui"
 import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config"
-import ColorModeToggle from "./colormode-toggle"
 import Navigation from "./navigation"
-import HeaderTitle from "./header-title"
 import HeaderExternalLinks from "./header-external-links"
+
+import { Link, graphql } from "gatsby"
+import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
+import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
+import React from "react"
+import Page from "./page"
 
 const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
+  const { siteTitle } = useSiteMetadata()
+  const { basePath } = useMinimalBlogConfig()
+  const isTopPage = location.pathname === "/"
 
   return (
-    <header sx={{ mb: [5, 6] }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        <HeaderTitle />
-        <ColorModeToggle />
-      </Flex>
-      <div
-        sx={{
-          boxSizing: `border-box`,
-          display: `flex`,
-          variant: `dividers.bottom`,
-          alignItems: `center`,
-          justifyContent: `space-between`,
-          mt: 3,
-          color: `secondary`,
-          a: { color: `secondary`, ":hover": { color: `heading` } },
-          flexFlow: `wrap`,
-        }}
+    <header>
+      <Link
+        to={replaceSlashes(`/${basePath}`)}
+        aria-label={`${siteTitle} - Back to home`}
+        sx={{ color: `heading`, textDecoration: `none` }}
       >
+        { isTopPage ? (
+          <React.Fragment>
+            <div sx={{ my: 0, fontWeight: `semibold`, fontSize: [5, 6] }}>{siteTitle}</div>
+            <HeaderExternalLinks />
+          </React.Fragment>
+        ) : ( 
+          <span sx={{ my: 0, fontWeight: `semibold`, fontSize: [4] }}>{Page.Head}</span>
+        ) }
+      </Link>
+      <span sx={{ display: `box`,  }}>
         <Navigation nav={nav} />
-        <HeaderExternalLinks />
-      </div>
+      </span>
     </header>
   )
 }
 
 export default Header
+

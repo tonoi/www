@@ -28,17 +28,18 @@ const Blog = ({ posts }: MBBlogProps) => {
   return (
     <Layout>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          Blog
+        <Heading>
+          <span sx={{ display: 'inline', position: 'absolute', left: 20, top: 0, marginRight: 'auto', my: 3
+          }}>Blog</span>
         </Heading>
-        <Link
+      </Flex>
+      <Listing posts={posts} sx={{ mt: [4, 5] }} />
+      <Link
           sx={(t) => ({ ...t.styles?.a, variant: `links.secondary`, marginY: 2 })}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
-          View all tags
+          記事のタグ一覧
         </Link>
-      </Flex>
-      <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
   )
 }

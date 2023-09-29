@@ -3,7 +3,7 @@ import { jsx, Link } from "theme-ui"
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
 
 const Footer = () => {
-  const { siteTitle } = useSiteMetadata()
+  const { siteTitleAlt } = useSiteMetadata()
 
   return (
     <footer
@@ -21,24 +21,13 @@ const Footer = () => {
       }}
     >
       <div>
-        &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
+        &copy; {new Date().getFullYear()} by {siteTitleAlt} All rights reserved.
       </div>
+
       <div>
-        <Link
-          aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog"
-        >
-          Theme
-        </Link>
-        {` `}
-        by
-        {` `}
-        <Link
-          aria-label="Link to the theme author's website"
-          href="https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme"
-        >
-          LekoArts
-        </Link>
+        <Link to='trademakr_guidelines.pdf'>商標ガイドライン</Link>
+        {'  '}
+        <Link to='privacy_policy.pdf'>プライバシーポリシー</Link>
       </div>
     </footer>
   )

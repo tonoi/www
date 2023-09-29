@@ -6,7 +6,7 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const config: GatsbyConfig = {
   siteMetadata: {
     siteTitle: `tonoi web site`,
-    siteTitleAlt: `Minimal Blog`,
+    siteTitleAlt: `tonoi Co.,Ltd.`,
     siteHeadline: `Minimal Blog`,
     siteUrl: `https://tonoi.co.jp`,
     siteDescription: `より住み良いInternetを目指して`,
@@ -22,17 +22,25 @@ const config: GatsbyConfig = {
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Top`,
+            slug: `/`,
           },
           {
-            title: `About`,
+            title: `サービス`,
+            slug: `/services`,
+          },
+          {
+            title: `実績`,
+            slug: `/history`,
+          },
+          {
+            title: `会社紹介`,
             slug: `/about`,
           },
           {
-            title: `History`,
-            slug: `/history`,
-          }
+            title: `Blog`,
+            slug: `/blog`,
+          },
         ],
         externalLinks: [
           {
@@ -40,8 +48,8 @@ const config: GatsbyConfig = {
             url: `https://www.facebook.com/tonoicojp`,
           },
           {
-            name: `Homepage`,
-            url: `https://tonoi.co.jp`,
+            name: `Linkedin`,
+            url: `https://www.linkedin.com/company/tonoi/`,
           },
         ],
       },
@@ -55,25 +63,25 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
+        name: `tonoi株式会社 - ネット社会の宿直(とのい)`,
         short_name: `tonoi-web`,
-        description: `ネット社会の宿直(とのい)`,
+        description: `より住み良いInternetを目指して`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#eee`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/icon.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
+            src: `/tonoi_logo.svg`,
             sizes: `512x512`,
-            type: `image/png`,
+            type: `image/svg`,
           },
         ],
       },

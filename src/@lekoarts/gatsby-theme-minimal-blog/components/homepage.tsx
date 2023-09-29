@@ -34,12 +34,10 @@ const Homepage = ({ posts }: MBHomepageProps) => {
 
   return (
     <Layout>
-      <h1 sx={visuallyHidden}>{siteTitle}</h1>
-      debug
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
-        <Hero /><Hero />
-        debug
+        <Hero />
       </section>
+      <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <Title text="Latest Posts">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
       </Title>
