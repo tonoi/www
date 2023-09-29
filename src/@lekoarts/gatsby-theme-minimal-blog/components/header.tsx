@@ -4,7 +4,8 @@ import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/
 import Navigation from "./navigation"
 import HeaderExternalLinks from "./header-external-links"
 
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
+import { useLocation} from "@reach/router"
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
 import React from "react"
@@ -14,6 +15,7 @@ const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
   const { siteTitle } = useSiteMetadata()
   const { basePath } = useMinimalBlogConfig()
+  const location = useLocation()
   const isTopPage = location.pathname === "/"
 
   return (

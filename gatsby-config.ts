@@ -10,7 +10,7 @@ const config: GatsbyConfig = {
     siteHeadline: `Minimal Blog`,
     siteUrl: `https://tonoi.co.jp`,
     siteDescription: `より住み良いInternetを目指して`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/images/top.jpg`,
     siteLanguage: `jp`,
     author: `mkoikawa@tonoi.co.jp`,
   },
