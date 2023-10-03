@@ -5,9 +5,9 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteTitle: `tonoi web site`,
+    siteTitle: `tonoi株式会社`,
     siteTitleAlt: `tonoi Co.,Ltd.`,
-    siteHeadline: `Minimal Blog`,
+    siteHeadline: `2023-Octs`,
     siteUrl: `https://tonoi.co.jp`,
     siteDescription: `より住み良いInternetを目指して`,
     siteImage: `/images/top.jpg`,
@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
             slug: `/services`,
           },
           {
-            title: `実績`,
+            title: `履歴`,
             slug: `/history`,
           },
           {
@@ -38,7 +38,7 @@ const config: GatsbyConfig = {
             slug: `/about`,
           },
           {
-            title: `Blog`,
+            title: `ノート`,
             slug: `/blog`,
           },
         ],
@@ -67,7 +67,7 @@ const config: GatsbyConfig = {
         short_name: `tonoi-web`,
         description: `より住み良いInternetを目指して`,
         start_url: `/`,
-        background_color: `#eee`,
+        background_color: `#fff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#6B46C1`,

@@ -25,9 +25,13 @@ const Header = () => {
         aria-label={`${siteTitle} - Back to home`}
         sx={{ color: `heading`, textDecoration: `none` }}
       >
+        
         { isTopPage ? (
           <React.Fragment>
-            <div sx={{ my: 0, fontWeight: `semibold`, fontSize: [5, 6] }}>{siteTitle}</div>
+            <img src="tonoi_logo.svg" sx={{ width: '65px', height: '65px', marginRight: '40px' }}  />
+            <div sx={{ my: 0, fontWeight: `semibold`, fontSize: [5, 6, 7], display: 'inline',
+                      verticalAlign: 'center',
+                   }}>{siteTitle}</div>
             <HeaderExternalLinks />
           </React.Fragment>
         ) : ( 

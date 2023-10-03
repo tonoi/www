@@ -21,6 +21,7 @@ const theme = merge(tailwind, {
     muted: tailwind.colors.gray[2],
     highlightLineBg: `rgba(0, 0, 0, 0.035)`,
     ...lightThemeVars,
+    background: `#f0f0FF`,
     modes: {
       dark: {
         text: tailwind.colors.gray[4],

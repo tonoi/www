@@ -34,12 +34,11 @@ const Homepage = ({ posts }: MBHomepageProps) => {
 
   return (
     <Layout>
-      <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
+      <section sx={{ mb: [4, 5, 6], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Hero />
       </section>
-      <h1 sx={visuallyHidden}>{siteTitle}</h1>
-      <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+      <Title text="最近の更新">
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>すべてのノート</Link>
       </Title>
       <Listing posts={posts} showTags={false} />
       <List>

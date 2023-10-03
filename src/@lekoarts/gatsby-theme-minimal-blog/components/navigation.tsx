@@ -25,7 +25,7 @@ const Navigation = ({ nav }: NavigationProps) => {
             top: 0,
             marginLeft: 'auto',
             "a:not(:last-of-type)": { mr: 3 },
-            fontSize: [1, `18px`],
+            fontSize: [1, `24px`],
             ".active": { color: `heading` } 
             }}
         >
