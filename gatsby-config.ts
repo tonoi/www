@@ -110,7 +110,7 @@ const config: GatsbyConfig = {
             }) =>
               allPost.nodes.map((post) => {
                 const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">もっと</a>.</strong></div><br /> <br />`
 
                 return {
                   title: post.title,
@@ -125,7 +125,7 @@ const config: GatsbyConfig = {
   allPost(sort: {date: DESC}) {
     nodes {
       title
-      date(formatString: "MMMM D, YYYY")
+      date(formatString: "YYYY/MM/D")
       excerpt
       slug
     }

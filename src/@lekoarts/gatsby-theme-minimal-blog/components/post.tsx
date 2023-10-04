@@ -30,6 +30,14 @@ export type MBPostProps = {
   }
 }
 
+function jpnformatDate(input) {
+  // MM.DD.YYYY形式の文字列を分割
+  const [day, month, year] = input.split('.');
+  
+  // YYYY/MM/DD形式で結果を返す
+  return `${year}/${month}/${day}`;
+}
+
 const px = [`16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.1) 0px ${v} ${v} 0px`)
 
@@ -39,7 +47,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data:
       {post.title}
     </Heading>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-      <time>{post.date}</time>
+      <time>{ jpnformatDate(post.date) }</time>
       {post.tags && (
         <React.Fragment>
           {` — `}

@@ -20,13 +20,21 @@ type BlogListItemProps = {
   showTags?: boolean
 }
 
+function jpnformatDate(input) {
+  // MM.DD.YYYY形式の文字列を分割
+  const [day, month, year] = input.split('.');
+  
+  // YYYY/MM/DD形式で結果を返す
+  return `${year}/${month}/${day}`;
+}
+
 const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
     <Link to={post.slug} sx={(t) => ({ ...t.styles?.a, fontSize: [1, 2, 3], color: `text` })}>
       {post.title}
     </Link>
     <p sx={{ color: `secondary`, mt: 1, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-      <time>{post.date}</time>
+      <time>{ jpnformatDate(post.date) }</time>
       {post.tags && showTags && (
         <React.Fragment>
           {` — `}
