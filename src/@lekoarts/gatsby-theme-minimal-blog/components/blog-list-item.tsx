@@ -29,7 +29,7 @@ function jpnformatDate(input) {
 }
 
 const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
-  <Box mb={4}>
+  <Box mb={3}>
     <Link to={post.slug} sx={(t) => ({ ...t.styles?.a, fontSize: [1, 2, 3], color: `text` })}>
       {post.title}
     </Link>

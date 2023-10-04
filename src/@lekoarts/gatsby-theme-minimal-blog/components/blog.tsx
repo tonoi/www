@@ -30,9 +30,10 @@ const Blog = ({ posts }: MBBlogProps) => {
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading>
           <span sx={{ display: 'inline', position: 'absolute', left: 20, top: 0, marginRight: 'auto', my: 3
-          }}>Blog</span>
+          }}>ノート</span>
         </Heading>
       </Flex>
+      <br /><hr />
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
       <Link
           sx={(t) => ({ ...t.styles?.a, variant: `links.secondary`, marginY: 2 })}

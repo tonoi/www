@@ -34,6 +34,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
 
   return (
     <Layout>
+      <hr />
       <section sx={{ mb: [4, 5, 6], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Hero />
       </section>

@@ -26,10 +26,9 @@ const Footer = () => {
 
       <div>
         <Link to='trademakr_guidelines.pdf'>商標ガイドライン</Link>
-        {'  '}
+        {' - '}
         <Link to='privacy_policy.pdf'>プライバシーポリシー</Link>
       </div>
-      <googleAnalytics />
     </footer>
   )
 }

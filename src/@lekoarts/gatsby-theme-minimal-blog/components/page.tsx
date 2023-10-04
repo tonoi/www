@@ -27,6 +27,7 @@ const Page: React.FC<React.PropsWithChildren<PageProps<MBPageProps>>> = ({ data:
         {page.title}
       </span>
     </Heading>
+    <br /><hr />
     <section sx={{ my: 5, variant: `layout.content` }}>{children}</section>
   </Layout>
 )
