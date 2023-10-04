@@ -10,6 +10,7 @@ import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replac
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
 import React from "react"
 import Page from "./page"
+import ReactGA from "react-ga4"
 
 const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
@@ -17,6 +18,14 @@ const Header = () => {
   const { basePath } = useMinimalBlogConfig()
   const location = useLocation()
   const isTopPage = location.pathname === "/"
+
+  // https://https://analytics.google.com/
+  // mkoikawa@tonoi.co.jp
+  ReactGA.initialize('G-J47NJBF9BV')
+  ReactGA.send( {
+    hitTYpe: "pageview",
+    page: location.pathname + location.search,
+  })
 
   return (
     <header>

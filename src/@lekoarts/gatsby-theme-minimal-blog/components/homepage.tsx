@@ -29,7 +29,7 @@ export type MBHomepageProps = {
 }
 
 const Homepage = ({ posts }: MBHomepageProps) => {
-  const { basePath, blogPath } = useMinimalBlogConfig()
+  const { basePath, blogPath, tagsPath } = useMinimalBlogConfig()
   const { siteTitle } = useSiteMetadata()
 
   return (
@@ -39,6 +39,8 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       </section>
       <Title text="最近の更新">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>すべてのノート</Link>
+        { ' - ' }
+        <Link to={replaceSlashes(`/${basePath}/${tagsPath}`)}>タグ一覧</Link>
       </Title>
       <Listing posts={posts} showTags={false} />
       <List>

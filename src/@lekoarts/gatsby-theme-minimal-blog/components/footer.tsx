@@ -29,6 +29,7 @@ const Footer = () => {
         {'  '}
         <Link to='privacy_policy.pdf'>プライバシーポリシー</Link>
       </div>
+      <googleAnalytics />
     </footer>
   )
 }
