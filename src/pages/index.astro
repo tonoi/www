@@ -1,0 +1,207 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import SectionHeader from '~/components/SectionHeader.astro';
+import ServiceCard from '~/components/ServiceCard.astro';
+import ResearchCard from '~/components/ResearchCard.astro';
+import AchievementCard from '~/components/AchievementCard.astro';
+import PartnerCard from '~/components/PartnerCard.astro';
+import TeamCard from '~/components/TeamCard.astro';
+import { missionItems } from '~/data/mission';
+import { services } from '~/data/services';
+import { researchHighlights } from '~/data/research';
+import { achievements } from '~/data/achievements';
+import { partners } from '~/data/partners';
+import { teamMembers } from '~/data/team';
+import { companyInfo } from '~/data/company';
+
+const pageTitle = 'tonoi株式会社 | Hybrid Computingで未来のIT基盤をつくる';
+const pageDescription =
+  'tonoi株式会社は、Hybrid Computingを核にエッジとクラウドをつなぐ研究開発を行い、受託開発・共同研究を通じて社会実装を支援します。';
+---
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Hero />
+
+  <SectionHeader
+    id="mission"
+    kicker="Mission"
+    title="クラウドとエッジを統合するHybrid Computingの探求"
+    description="AI・センサー・ハードウェアが密接に連携する時代に、持続可能な分散処理基盤を設計し続けます。"
+  >
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
+      {missionItems.map((item) => (
+        <article class="relative overflow-hidden rounded-3xl border border-white/5 bg-slate-900/40 p-8">
+          <div class="absolute inset-0 opacity-15">
+            <img src={item.image} alt={item.label} class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="relative flex h-full flex-col gap-6">
+            <span class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-300">{item.label}</span>
+            <div>
+              <h3 class="text-xl font-semibold text-slate-100">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-slate-300">{item.description}</p>
+            </div>
+            <ul class="mt-auto space-y-2 text-sm text-slate-300/90">
+              {item.points.map((point) => (
+                <li class="flex items-start gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-300"></span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="mt-16 overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 p-6">
+      <img
+        src="/images/hc_position2.png"
+        alt="Hybrid Computingの位置付け"
+        class="mx-auto w-full max-w-4xl"
+        loading="lazy"
+      />
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="services"
+    kicker="Services"
+    title="研究から社会実装まで伴走する分散システム開発"
+    description="自社開発のHybrid Computingプラットフォームを軸に、AI・IoT・クラウドネイティブなプロジェクトを支援します。"
+  >
+    <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {services.map((service) => (
+        <ServiceCard service={service} />
+      ))}
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="research"
+    kicker="R&D"
+    title="Academic × Industrial Research"
+    description="Hybrid Computingをコア技術として、学術コミュニティとの共創と産業応用を同時に進めています。"
+  >
+    <div class="mt-16 grid gap-8 md:grid-cols-2">
+      {researchHighlights.map((item) => (
+        <ResearchCard item={item} />
+      ))}
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="achievements"
+    kicker="Milestones"
+    title="研究成果と社会実装のマイルストーン"
+    description="論文発表、特許取得、展示会を通じたアウトプットを継続的に蓄積しています。"
+  >
+    <div class="mt-16 grid gap-6 md:grid-cols-2">
+      {achievements.map((achievement) => (
+        <AchievementCard achievement={achievement} />
+      ))}
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="team"
+    kicker="Team"
+    title="多領域のスペシャリストがHybrid Computingを推進"
+  >
+    <div class="mt-16 grid gap-6 md:grid-cols-2">
+      {teamMembers.map((member) => (
+        <TeamCard member={member} />
+      ))}
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="partners"
+    kicker="Partners"
+    title="産学連携で社会実装を加速"
+  >
+    <div class="mt-16 grid gap-6 md:grid-cols-3">
+      {partners.map((partner) => (
+        <PartnerCard partner={partner} />
+      ))}
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="company"
+    kicker="Company"
+    title="会社概要"
+  >
+    <div class="mt-16 grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
+      <div class="space-y-6 text-sm leading-relaxed text-slate-300">
+        <div class="rounded-3xl border border-white/5 bg-slate-900/60 p-6">
+          <dl class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3">
+            <dt class="font-semibold text-slate-200">商号</dt>
+            <dd>{companyInfo.name}</dd>
+            <dt class="font-semibold text-slate-200">所在地</dt>
+            <dd>{companyInfo.address}</dd>
+            <dt class="font-semibold text-slate-200">設立</dt>
+            <dd>{companyInfo.establishment}</dd>
+            <dt class="font-semibold text-slate-200">資本金</dt>
+            <dd>{companyInfo.capital}</dd>
+            <dt class="font-semibold text-slate-200">代表</dt>
+            <dd>{companyInfo.representative}</dd>
+            <dt class="font-semibold text-slate-200">電話</dt>
+            <dd><a href={`tel:${companyInfo.tel.replace(/-/g, '')}`}>{companyInfo.tel}</a></dd>
+            <dt class="font-semibold text-slate-200">メール</dt>
+            <dd><a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a></dd>
+          </dl>
+        </div>
+        <div class="rounded-3xl border border-white/5 bg-slate-900/60 p-6">
+          <h3 class="text-base font-semibold text-slate-100">Our Vision</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">{companyInfo.mission}</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-white/5 bg-slate-900/60">
+        <iframe
+          src={companyInfo.googleMap}
+          width="100%"
+          height="380"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="border-t border-white/10 p-4 text-center text-sm text-slate-300">
+          <a href={companyInfo.googleMapLink} target="_blank" rel="noopener noreferrer" class="hover:text-brand-200">
+            Google Mapsで開く
+          </a>
+        </div>
+      </div>
+    </div>
+  </SectionHeader>
+
+  <SectionHeader
+    id="contact"
+    kicker="Contact"
+    title="Hybrid Computingについてお気軽にご相談ください"
+    description="共同研究、受託開発、社会実装プロジェクトのご相談を受け付けています。"
+  >
+    <div class="mt-16 flex flex-col gap-8 rounded-3xl border border-white/10 bg-slate-900/60 p-10 md:flex-row md:items-center md:justify-between">
+      <div class="space-y-4 text-sm text-slate-300 md:max-w-xl">
+        <p>
+          課題感やアイデアの段階からご相談いただけます。エッジ/クラウド/AI/ハードウェアの専門家が、技術検証から量産運用まで伴走します。
+        </p>
+        <div class="grid gap-2">
+          <a href={`mailto:${companyInfo.email}`} class="flex items-center gap-3 text-base font-semibold text-brand-200">
+            <span aria-hidden="true">✉</span>
+            {companyInfo.email}
+          </a>
+          <a href={`tel:${companyInfo.tel.replace(/-/g, '')}`} class="flex items-center gap-3 text-base font-semibold text-brand-200">
+            <span aria-hidden="true">☎</span>
+            {companyInfo.tel}
+          </a>
+        </div>
+      </div>
+      <a
+        href="mailto:info@tonoi.co.jp?subject=Hybrid%20Computing%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87"
+        class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-4 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-400"
+      >
+        メールで問い合わせる
+      </a>
+    </div>
+  </SectionHeader>
+</BaseLayout>

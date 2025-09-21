@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-feature-settings: 'palt' 1;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200 antialiased;
+}
+
+a {
+  @apply text-brand-300 hover:text-brand-200 transition-colors;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-brand-100; 
+}
+
+.section-subtitle {
+  @apply mt-3 text-lg text-slate-300;
+}

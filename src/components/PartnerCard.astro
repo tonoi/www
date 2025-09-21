@@ -1,0 +1,25 @@
+---
+import type { Partner } from '~/data/partners';
+
+interface Props {
+  partner: Partner;
+}
+const { partner } = Astro.props;
+---
+<a
+  href={partner.url}
+  class="flex flex-col items-center gap-4 rounded-3xl border border-white/5 bg-slate-900/40 p-6 transition hover:border-brand-400/40 hover:bg-slate-900/80"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={partner.logo}
+    alt={`${partner.name} ロゴ`}
+    class="h-16 w-auto object-contain"
+    loading="lazy"
+  />
+  <div class="text-center">
+    <h3 class="text-base font-semibold text-slate-100">{partner.name}</h3>
+    <p class="mt-2 text-sm text-slate-400">{partner.description}</p>
+  </div>
+</a>
