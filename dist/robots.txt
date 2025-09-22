@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /sc18/
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /images/
-Disallow: /js/
-Disallow: /categories/
-Disallow: /tags/
