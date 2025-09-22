@@ -1,0 +1,10 @@
+{
+  "name": "tslib",
+  "version": "2.6.2",
+  "type": "module",
+  "main": "tslib.mjs",
+  "module": "tslib.mjs",
+  "exports": {
+    ".": "./tslib.mjs"
+  }
+}
