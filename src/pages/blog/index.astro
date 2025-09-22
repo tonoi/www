@@ -1,0 +1,26 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import PostCard from '~/components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+<BaseLayout title="tonoi株式会社 | ノート" description="tonoi株式会社の研究開発・事業活動に関するインサイトとレポートを発信します。">
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-24 text-slate-100">
+    <div class="absolute inset-x-0 -top-40 h-80 bg-[radial-gradient(circle_at_top,rgba(82,150,255,0.35),transparent_60%)]"></div>
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.4em] text-brand-300">Insights</p>
+      <h1 class="mt-4 text-4xl font-semibold md:text-5xl">Research &amp; Business Notes</h1>
+      <p class="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
+        Hybrid Computing™ を核に広がる研究・PoC・パートナーシップの軌跡をまとめています。分散AIやスマートシティの最新動向をぜひご覧ください。
+      </p>
+    </div>
+  </section>
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      {posts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

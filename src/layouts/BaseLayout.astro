@@ -1,6 +1,21 @@
 ---
 import '../styles/global.css';
-const { title = 'tonoi株式会社', description = 'Hybrid Computing™で次世代のIT処理基盤をデザインするtonoi株式会社のコーポレートサイトです。', ogImage = '/images/top.jpeg' } = Astro.props;
+
+const {
+  title = 'tonoi株式会社',
+  description = 'Hybrid Computing™で次世代のIT処理基盤をデザインするtonoi株式会社のコーポレートサイトです。',
+  ogImage = '/images/top.jpeg'
+} = Astro.props;
+
+const navItems = [
+  { label: 'Mission', href: '#mission' },
+  { label: 'Services', href: '#services' },
+  { label: 'Research', href: '#research' },
+  { label: 'Timeline', href: '#achievements' },
+  { label: 'Team', href: '#team' },
+  { label: 'Company', href: '#company' },
+  { label: 'Blog', href: '/blog/' }
+];
 ---
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
@@ -29,23 +44,20 @@ const { title = 'tonoi株式会社', description = 'Hybrid Computing™で次世
   </head>
   <body class="bg-slate-50 text-slate-800">
     <div class="relative flex min-h-screen flex-col">
-      <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200 shadow-sm">
+      <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur">
         <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
           <a href="/" class="flex items-center gap-3 font-semibold tracking-tight text-brand-700">
             <img src="/tonoi_logo.svg" alt="tonoi" class="h-8 w-8" />
             <span class="text-lg">tonoi株式会社</span>
           </a>
-          <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-            <a href="#mission" class="hover:text-brand-600">Mission</a>
-            <a href="#services" class="hover:text-brand-600">Services</a>
-            <a href="#research" class="hover:text-brand-600">Research</a>
-            <a href="#achievements" class="hover:text-brand-600">Achievements</a>
-            <a href="#company" class="hover:text-brand-600">Company</a>
-            <a href="#contact" class="hover:text-brand-600">Contact</a>
+          <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
+            {navItems.map((item) => (
+              <a href={item.href} class="hover:text-brand-600">{item.label}</a>
+            ))}
           </nav>
           <a
             href="#contact"
-            class="hidden rounded-full bg-brand-500 px-5 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-400 md:inline-flex"
+            class="hidden rounded-full bg-brand-500 px-5 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-400 lg:inline-flex"
           >
             お問い合わせ
           </a>
@@ -62,9 +74,10 @@ const { title = 'tonoi株式会社', description = 'Hybrid Computing™で次世
               <p class="mt-1 text-xs text-slate-500">© {new Date().getFullYear()} tonoi Inc. All rights reserved.</p>
             </div>
             <div class="flex flex-wrap gap-4">
+              <a href="/legacy/" class="hover:text-brand-600">旧サイトアーカイブ</a>
               <a href="/privacy_policy.pdf" class="hover:text-brand-600">プライバシーポリシー</a>
               <a href="/trademark_guidelines.pdf" class="hover:text-brand-600">商標ガイドライン</a>
-              <a href="/sitemap.xml" class="hover:text-brand-600">サイトマップ</a>
+              <a href="/legacy/sitemap.xml" class="hover:text-brand-600">サイトマップ</a>
             </div>
           </div>
         </div>

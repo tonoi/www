@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tonoi株式会社</title>
+    <link>/</link>
+    <description>Recent content on tonoi株式会社</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 05 Oct 2018 14:40:08 +0900</lastBuildDate>
+    
+	<atom:link href="/legacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Service3</title>
+      <link>/services/service3/</link>
+      <pubDate>Fri, 05 Oct 2018 14:40:08 +0900</pubDate>
+      
+      <guid>/services/service3/</guid>
+      <description>宅配便の再配達が運送業者の負担になっています。家庭向け宅配ボックスもありますが、本人確認や盗難の危険性もあり配達者側に抵抗があるようです。ドアホンと宅配ボックスを組み合わせ、本人確認をしながら遠隔地で荷物を受け取れる仕組みを開発しました。&amp;rdquo; detail = &amp;ldquo;宅配便の再配達が運送業者の負担になっています。家庭向け宅配ボックスもありますが、本人確認や盗難の危険性もあり配達者側に抵抗があるようです。ドアホンと宅配ボックスを組み合わせ、本人確認をしながら遠隔地で荷物を受け取れる仕組みを開発しました。ホームゲートウェイ宅配ボックス (実証実験)対面型ドアホン (POC)配布用資料対面型ドアホン (開発機)</description>
+    </item>
+    
+    <item>
+      <title>Service2</title>
+      <link>/services/service2/</link>
+      <pubDate>Fri, 05 Oct 2018 14:40:01 +0900</pubDate>
+      
+      <guid>/services/service2/</guid>
+      <description>S3Cubed 様の依頼により、NYRIAD の思想をもとにした新しい RAID Storage Software の企画・設計を行いました。大容量・高速化とともに、低消費電力を狙ったものです。</description>
+    </item>
+    
+    <item>
+      <title>Service1</title>
+      <link>/services/service1/</link>
+      <pubDate>Thu, 04 Oct 2018 18:17:40 +0900</pubDate>
+      
+      <guid>/services/service1/</guid>
+      <description>Hybrid Computing (HC) とは tonoi が開発する Hybrid Computing (HC) は、ストレージ上の大容量データをクラウドに転送するのではなく、大容量データが存在するストレージに対しコンパクトな演算処理コードを転送し実行する仕組みです。大容量データを保管するストレージに HC 機能を導入すると複数のメリットがあります。
+
+ストレージ自身が持つ高度な演算力をデータ転送よりも演算処理に多く割り当てることが可能となる
+複数台のストレージ構成に HC 機能を導入した場合、それぞれのストレージに対し個別の処理を行わせることが可能であり分散処理による負荷分散が可能
+巨大なデータがストレージからクラウドに移動せず、末端のストレージ上すなわち巨大データに物理的にも一番近い箇所で演算処理が行われるため、データ自体が電気的にも移動する距離が最短になる。このためここでもデータ転送量が削減されレスポンスが向上
+
+ データ転送の問題 クラウドやAI技術の進歩で巨大データが必要になった現代、データ転送速度不足の問題が随所で発生しています。理論的に、データ転送速度の進化を表すギルダーの法則はムーアの法則によるデータ量の増加よりも遅く、10年間で相対速度が1/10になります。
+このデータ転送速度不足の問題は、時代の経過とともに重大な課題となり顕在化してきています。
+$ データ量: \displaystyle \lim_{ x \to \infty } n \times \log n &amp;gt; 転送速度: 2^{x/1.5} \times 3 , $ $ \scriptsize{ フィボナッチ数: n = \frac{ \phi ^ x - (-\phi)^{-x} }{ \sqrt{5} } , \ 黄金比: \phi = \frac{ 1 + \sqrt{ 5 } }{2} }$ HC によるパラダイムシフト (シーケンシャルとランダム)</description>
+    </item>
+    
+  </channel>
+</rss>

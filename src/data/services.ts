@@ -30,7 +30,7 @@ export const services: ServiceItem[] = [
     name: 'HC 分散処理ミドルウェア',
     description:
       '大容量データをクラウドへ送るのではなく、演算コードをデータの近くへ配信するHybrid Computing™ミドルウェア。AIロジックの集中開発と分散実行を両立します。',
-    href: '/services/service1/',
+    href: '/legacy/services/service1/',
     category: 'solution',
     icon: '🧠'
   },
@@ -38,7 +38,7 @@ export const services: ServiceItem[] = [
     name: '高性能ストレージ設計',
     description:
       'NYRIAD の思想をもとに、大容量・高速化・低消費電力を兼ね備えた新型RAIDストレージソフトウェアを設計。データ重視の現場でHybrid Computing™を活かします。',
-    href: '/services/service2/',
+    href: '/legacy/services/service2/',
     category: 'research',
     icon: '💾'
   },
@@ -46,7 +46,7 @@ export const services: ServiceItem[] = [
     name: '固定電話連携ドアホン',
     description:
       '宅配事業者の再配達負荷を軽減するため、ドアホンと宅配ボックスを組み合わせたリモート受け渡しシステムを開発。固定電話と連携し本人確認を実現します。',
-    href: '/services/service3/',
+    href: '/legacy/services/service3/',
     category: 'product',
     icon: '📞'
   }

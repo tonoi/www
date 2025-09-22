@@ -21,8 +21,8 @@ export const achievements: AchievementItem[] = [
     description:
       '高知県の養豚場にて、光電子タグとAI解析による位置可視化のPoCを実施。スマート畜産や物流分野での社会実装を推進。',
     links: [
-      { label: 'LED Tag Leaflet', href: '/fy21/LED-Tag-Leaflet.pdf' },
-      { label: 'Location Demo', href: '/2021location/location_demo.zip' }
+      { label: 'LED Tag Leaflet', href: '/legacy/fy21/LED-Tag-Leaflet.pdf' },
+      { label: 'Location Demo', href: '/legacy/2021location/location_demo.zip' }
     ]
   },
   {
@@ -32,8 +32,8 @@ export const achievements: AchievementItem[] = [
     description:
       '360度動画やエッジ推論デモを組み合わせ、HCの体験型プレゼンテーションセットを構築。スマートシティや遠隔監視のPoCに活用しました。',
     links: [
-      { label: '360 Video', href: '/fy20/360video-2.mov' },
-      { label: 'Sales Deck', href: '/fy20/tonoi_sales.pdf' }
+      { label: '360 Video', href: '/legacy/fy20/360video-2.mov' },
+      { label: 'Sales Deck', href: '/legacy/fy20/tonoi_sales.pdf' }
     ]
   },
   {
@@ -43,8 +43,8 @@ export const achievements: AchievementItem[] = [
     description:
       'Hybrid Computing™のアーキテクチャと応用事例を複数の論文として発表。分散処理の新しい形を学術コミュニティと共有しました。',
     links: [
-      { label: 'ARC19235 発表資料', href: '/FY19Q1/2019ARC227/IPSJ-ARC19235.htm' },
-      { label: 'Leaflet', href: '/FY19Q1/TCA_tonoi-Leaflet_20191028.pdf' }
+      { label: 'ARC19235 発表資料', href: '/legacy/FY19Q1/2019ARC227/IPSJ-ARC19235.htm' },
+      { label: 'Leaflet', href: '/legacy/FY19Q1/TCA_tonoi-Leaflet_20191028.pdf' }
     ]
   },
   {
@@ -54,8 +54,8 @@ export const achievements: AchievementItem[] = [
     description:
       'スーパーコンピューティング分野の国際会議にて、tonoiのHybrid Computing™技術とビジョンを発信しました。',
     links: [
-      { label: 'SC18 Archive', href: '/sc18/at_a_glance.html' },
-      { label: 'BPCCスライド', href: '/BPCC18/tonoi-bpcc-public.pdf' }
+      { label: 'SC18 Archive', href: '/legacy/sc18/at_a_glance.html' },
+      { label: 'BPCCスライド', href: '/legacy/BPCC18/tonoi-bpcc-public.pdf' }
     ]
   }
 ];

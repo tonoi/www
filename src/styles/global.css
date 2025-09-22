@@ -6,10 +6,27 @@
   color-scheme: light;
   font-feature-settings: 'palt' 1;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   @apply bg-slate-50 text-slate-800 antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+:lang(ja) {
+  line-break: strict;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 a {
