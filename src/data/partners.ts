@@ -19,10 +19,10 @@ export const partners: Partner[] = [
     url: 'https://shinonome.io/'
   },
   {
-    name: '東京大学 橋田研究室',
-    description: '自然言語・社会情報技術と連携した共同研究。',
-    logo: '/images/utlogo.png',
-    url: 'http://www.sict.i.u-tokyo.ac.jp/members/hasida/'
+    name: '理化学研究所 橋田浩一 (元東大教授)',
+    description: '自然言語・社会情報技術の知見を活かし、Hybrid Computing™を社会システムへ展開。',
+    logo: '/images/riken_logo.svg',
+    url: 'https://www.riken.jp/'
   },
   {
     name: 'Pacific Applied Technologies',
@@ -32,14 +32,20 @@ export const partners: Partner[] = [
   },
   {
     name: '地方創生SDGsプラットフォーム',
-    description: '地域課題を解決するスマートシティ連携でHybrid Computingを実装。',
+    description: '地域課題を解決するスマートシティ連携でHybrid Computing™を実装。',
     logo: '/images/platform_logo_wheel.png',
     url: 'https://future-city.go.jp/'
   },
   {
-    name: 'Andes Technology Corporation',
-    description: 'RISC-V コアと低消費電力プロセッサ技術の評価パートナー。',
-    logo: '/images/andes_logo.png',
-    url: 'http://www.andestech.com/en/partners/ip/'
+    name: 'GovTech東京',
+    description: '行政デジタル化と市民サービスの高度化に向けた共創パートナー。',
+    logo: '/images/govtech_tokyo_logo.svg',
+    url: 'https://www.govtechtokyo.metro.tokyo.lg.jp/'
+  },
+  {
+    name: 'デジタル庁',
+    description: '社会全体のデジタルトランスフォーメーションを推進する政策連携。',
+    logo: '/images/digital_agency_logo.svg',
+    url: 'https://www.digital.go.jp/'
   }
 ];

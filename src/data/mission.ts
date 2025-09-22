@@ -23,10 +23,10 @@ export const missionItems: MissionItem[] = [
   },
   {
     id: 'hybrid',
-    label: 'Hybrid Computing',
+    label: 'Hybrid Computing™',
     title: 'クラウドとエッジを統合するtonoi独自の基盤技術',
     description:
-      'クラウドの俊敏性とエッジの即応性を組み合わせ、AIやデータ処理を最適な場所に自動配置する分散プラットフォームを開発しています。Hybrid Computing が、これまで両立できなかったDevOpsとエッジ分散をつなぎます。',
+      'クラウドの俊敏性とエッジの即応性を組み合わせ、AIやデータ処理を最適な場所に自動配置する分散プラットフォームを開発しています。Hybrid Computing™ が、これまで両立できなかったDevOpsとエッジ分散をつなぎます。',
     points: [
       'AIワークロードをハードウェア特性に応じて自動分散',
       'データ転送コストを抑えながら推論精度を担保',

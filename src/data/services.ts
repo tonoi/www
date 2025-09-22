@@ -29,7 +29,7 @@ export const services: ServiceItem[] = [
   {
     name: 'HC 分散処理ミドルウェア',
     description:
-      '大容量データをクラウドへ送るのではなく、演算コードをデータの近くへ配信するHybrid Computingミドルウェア。AIロジックの集中開発と分散実行を両立します。',
+      '大容量データをクラウドへ送るのではなく、演算コードをデータの近くへ配信するHybrid Computing™ミドルウェア。AIロジックの集中開発と分散実行を両立します。',
     href: '/services/service1/',
     category: 'solution',
     icon: '🧠'
@@ -37,7 +37,7 @@ export const services: ServiceItem[] = [
   {
     name: '高性能ストレージ設計',
     description:
-      'NYRIAD の思想をもとに、大容量・高速化・低消費電力を兼ね備えた新型RAIDストレージソフトウェアを設計。データ重視の現場でHybrid Computingを活かします。',
+      'NYRIAD の思想をもとに、大容量・高速化・低消費電力を兼ね備えた新型RAIDストレージソフトウェアを設計。データ重視の現場でHybrid Computing™を活かします。',
     href: '/services/service2/',
     category: 'research',
     icon: '💾'

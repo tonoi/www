@@ -12,7 +12,7 @@ export const teamMembers: TeamMember[] = [
     role: '代表取締役 / Chief Architect',
     bio: 'HP-LX日本語化プロジェクトやSGI Netscape Serverの立ち上げ、Microsoftでのインターネット/ Xbox事業などを経てtonoiを創業。',
     image: '/images/koikawa.jpg',
-    focus: ['Hybrid Computing', 'Architecture', 'Business Strategy']
+    focus: ['Hybrid Computing™', 'Architecture', 'Business Strategy']
   },
   {
     name: '小倉 豪放',
@@ -27,20 +27,6 @@ export const teamMembers: TeamMember[] = [
     bio: 'NECでのASIC/FPGA設計経験を基盤に、エッジデバイス向けのハードウェアとAIアクセラレータを担当。',
     image: '/images/aoki.png',
     focus: ['FPGA', 'Edge Device', 'Hardware Design']
-  },
-  {
-    name: '草野 龍雄',
-    role: 'AI・アプリケーション開発',
-    bio: 'SNS運営やdocomo/DeNAでのAI開発を経てtonoiに参画。データ活用とアプリ開発の両面を担います。',
-    image: '/images/kusano.jpg',
-    focus: ['AI', 'Application Development', 'Ops']
-  },
-  {
-    name: '髙橋 弘至',
-    role: 'API / 分散処理エンジニア',
-    bio: 'Craftsman SoftwareやScala LLVM開発の経験を活かし、高効率な分散APIを設計。Shinonome取締役CTO。',
-    image: '/images/takahashi.jpg',
-    focus: ['API Design', 'Scala / LLVM', 'Distributed Systems']
   },
   {
     name: '林 伸彦',
