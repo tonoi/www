@@ -1,57 +1,95 @@
-<section class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-slate-100">
-  <div class="absolute inset-0">
-    <div class="absolute -left-16 top-24 h-72 w-72 rounded-full bg-brand-200/50 blur-3xl"></div>
-    <div class="absolute right-[-10rem] bottom-[-12rem] h-[30rem] w-[30rem] rounded-full bg-sky-200/40 blur-[140px]"></div>
+---
+const stats = [
+  { value: '2', suffix: '件', label: 'Hybrid Computing™ 関連特許' },
+  { value: '15+', suffix: '', label: '共同研究プロジェクト' },
+  { value: '20年', suffix: '', label: 'クラウド & エッジ実務経験' }
+];
+
+const highlights = [
+  '演算コードをデータの近くへ届ける Hybrid Computing™',
+  '光電子タグ × 分散AIによるロケーションDX',
+  '行政・産業での社会実装を見据えた DevOps for Hardware'
+];
+---
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-50/80 via-white to-white text-slate-900">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-x-0 top-[-220px] h-[520px] bg-[radial-gradient(circle_at_top,rgba(82,150,255,0.32),transparent_70%)]"></div>
+    <div class="absolute -left-32 top-14 h-72 w-72 rounded-full bg-brand-200/60 blur-3xl"></div>
+    <div class="absolute right-[-8rem] bottom-[-8rem] h-[26rem] w-[26rem] rounded-full bg-sky-200/50 blur-[140px]"></div>
     <img
       src="/images/top.jpeg"
       alt="Hybrid Computing™"
-      class="absolute inset-0 h-full w-full object-cover opacity-10"
+      class="absolute inset-0 h-full w-full object-cover opacity-15"
       loading="lazy"
     />
   </div>
-  <div class="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-28 pt-32 md:flex-row md:items-center">
-    <div class="max-w-2xl">
-      <p class="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600 shadow-sm">
+  <div class="mx-auto grid max-w-6xl gap-16 px-6 pb-28 pt-28 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+    <div class="space-y-8">
+      <span class="inline-flex items-center gap-3 rounded-full border border-brand-100 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-brand-600 shadow-sm">
         Hybrid Computing™
-      </p>
-      <h1 class="mt-6 text-4xl font-semibold leading-tight text-slate-900 md:text-5xl">
-        クラウドとエッジを結ぶ、次世代の分散IT処理基盤
+      </span>
+      <h1 class="text-4xl font-semibold leading-tight md:text-5xl">
+        より住み良い Internet を支えるデータ指向の分散プラットフォーム
       </h1>
-      <p class="mt-6 text-lg leading-relaxed text-slate-600">
-        tonoi株式会社は、AIとデータを価値に変えるHybrid Computing™を研究開発・社会実装するテクノロジーカンパニーです。クラウドネイティブな開発スピードを維持したまま、エッジ現場の即応性を実現するソリューションを提供します。
+      <p class="text-base leading-relaxed text-slate-600 md:text-lg">
+        tonoi株式会社は、旧サイトで培った分散処理の知見をもとに、クラウドとエッジをまたぐ Hybrid Computing™ を最新の技術トレンドと統合しました。プライバシーを守りながら価値創出を加速する社会実装を伴走します。
       </p>
-      <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="#insights"
+          class="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-400"
+        >
+          最新ノートを見る
+          <span aria-hidden="true">→</span>
+        </a>
+        <a
+          href="/legacy/"
+          class="inline-flex items-center gap-3 rounded-full border border-brand-200 bg-white px-6 py-3 text-sm font-semibold text-brand-600 transition hover:border-brand-300"
+        >
+          旧サイトのアーカイブ
+          <span aria-hidden="true">↗</span>
+        </a>
         <a
           href="#contact"
-          class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-400"
+          class="inline-flex items-center gap-3 rounded-full border border-brand-200/60 bg-white/70 px-6 py-3 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-white"
         >
-          パートナーシップを相談する
-        </a>
-        <a
-          href="#mission"
-          class="inline-flex items-center justify-center rounded-full border border-brand-200 px-6 py-3 text-sm font-semibold text-brand-600 transition hover:border-brand-400 hover:text-brand-700"
-        >
-          tonoiのMissionを見る
+          お問い合わせ
+          <span aria-hidden="true">✉</span>
         </a>
       </div>
+      <div class="grid gap-4 sm:grid-cols-3">
+        {stats.map((stat) => (
+          <div class="rounded-3xl border border-brand-100 bg-white/80 p-5 text-center shadow-sm backdrop-blur">
+            <p class="text-3xl font-semibold text-brand-700">
+              {stat.value}
+              <span class="text-lg font-medium text-brand-500">{stat.suffix}</span>
+            </p>
+            <p class="mt-2 text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">{stat.label}</p>
+          </div>
+        ))}
+      </div>
     </div>
-    <div class="relative flex-1">
-      <div class="rounded-3xl border border-brand-100 bg-white/80 p-6 shadow-lg shadow-brand-100/60 backdrop-blur">
-        <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-600">R&amp;D Snapshot</h2>
-        <ul class="mt-6 space-y-4 text-sm text-slate-700">
-          <li class="flex items-start gap-3">
-            <span class="mt-1 h-2 w-2 rounded-full bg-brand-500"></span>
-            ハードウェアに最適配置するAI分散実行フロー
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="mt-1 h-2 w-2 rounded-full bg-brand-500"></span>
-            LEDタグによるロケーションDXとスマート畜産の実証
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="mt-1 h-2 w-2 rounded-full bg-brand-500"></span>
-            学術研究と事業開発をつなぐDevOps for Hardware
-          </li>
+    <div class="space-y-6">
+      <div class="rounded-3xl border border-brand-100 bg-white/85 p-8 shadow-lg shadow-brand-100/40 backdrop-blur">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-brand-600">R&amp;D Focus</p>
+        <ul class="mt-5 space-y-4 text-sm leading-relaxed text-slate-600">
+          {highlights.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 flex-none rounded-full bg-brand-500"></span>
+              <span>{item}</span>
+            </li>
+          ))}
         </ul>
+        <div class="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-brand-500">
+          <span class="rounded-full bg-brand-50 px-3 py-1">Edge AI</span>
+          <span class="rounded-full bg-brand-50 px-3 py-1">Smart City</span>
+          <span class="rounded-full bg-brand-50 px-3 py-1">Governance</span>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-brand-100 bg-white/90 p-6 text-sm leading-relaxed text-slate-600 shadow-md">
+        Hybrid Computing™ リーフレットや IPSJ 発表資料など、旧サイトで公開していた技術ドキュメントは
+        <a href="#research" class="ml-1 text-brand-600 underline decoration-dotted underline-offset-4">Research セクション</a>
+        からダウンロードできます。
       </div>
     </div>
   </div>
