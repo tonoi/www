@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: '林 伸彦',
     role: '戦略会計アドバイザー',
-    bio: '公認会計士・税理士。林戦略会計税務事務所 代表、日本MITベンチャーフォーラム副理事長。',
+    bio: '公認会計士・税理士。林戦略会計税務事務所 代表、日本MITベンチャーフォーラム理事（元副理事長）。',
     image: '/images/hayashi.jpg',
     focus: ['Finance', 'Strategy', 'Governance']
   }
